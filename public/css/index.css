@@ -1,7 +1,58 @@
-html {
-  max-width: 720px;
-}
 
-body {
-  background: #fff;
+.card > p {
+   color: hsla(42, 92%, 70%, 1);
+   -webkit-text-fill-color: red;
+   -webkit-text-stroke: 1px blue;
+   direction: rtl;
+}
+#test {
+    color: initial;
+    -webkit-text-fill-color: initial;
+    -webkit-text-stroke: initial;
+    direction: initial;
+    letter-spacing: 0.1em;
+}
+.card {
+    color: red;
+}
+#test {
+    color: inherit;
+    -webkit-text-fill-color: inherit;
+    -webkit-text-stroke: inherit;
+    writing-mode: horizontal-tb;
+}
+h1 {
+    text-align: center;
+}
+span {
+    text-transform: capitalize;
+    text-decoration: underline wavy red;
+}
+pre {
+	tab-size: 100px;
+}
+* {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+span {
+    font-size: xx-small;
+    font-weight: bolder;
+    font-style: oblique;
+    font-display: swap;
+}
+h1 {
+    font-size: x-large;
+    font-weight: italic;
+}
+.test {
+    display: none;
+}
+.block {
+    display: block;
+    background-color: rgb(237, 234, 234);
+    margin: 10px 30px;
+    max-width: min-content;
+    min-height: min-content;
+    max-height: fit-content;
 }
