@@ -12,14 +12,15 @@
             </nav>
         </header>
     <main class="main">
-         {{#with info}}
-            <div class="header_info">
-                <h1 class="header_info">{{title}}</h1>
-                <p class="header_info">{{description}}</p>
+        {{#with info}}
+        <div class="info">
+            <div class="info_content">
+                <h1 class="info_title">{{title}}</h1>
+                <p class="info_description">{{description}}</p>
             </div>
+        </div>
         {{/with}}
-        
-        
+       
         {{#with form}}
             <form class="form">
                 <h2 class="form_title">{{title}}</h4>
@@ -39,18 +40,40 @@
                 <p class="form_info">{{info}}</p>
             </form>
         {{/with}}
-
-        
+         
     </main>
-    <div class="advantages">    
-        {{#each advantages}}
-            <div>
-                <strong>{{title}}</strong>
-                <p>{{text}}</p>
+    
+    <div class="updates_block">
+        {{#with updates}}
+            <h4 class="list_title">{{title}}</h4>
+            <div class="list_user">
+                {{#each list}}
+                    <div class="list_content">
+                        <span class="list_nickname">{{nickname}}</span>
+                        <p class="list_description">{{description}}</p>
+                    </div>
+                {{/each}}
             </div>
-        {{/each}}
+            
+            <a href="{{show_all.url}}" class="show_link">{{show_all.text}}</a>
+           
+        {{/with}}
     </div>
- 
+
+    <div class="expirience_block">
+        {{#with expirience}}
+            <h3 class="experience_title">{{title}}</h3>
+           <div class="expirience_column">
+                {{#each list}}
+                    <div class="expirience_list">
+                        <h4 class="expirience_name">{{name}}</h4>
+                        <p class="expirience_details">{{details}}</p>
+                    </div>
+                {{/each}}
+            </div>
+        {{/with}}
+    </div>
+   
     <footer class="footer" id="test">
             <div>
                 {{> logo}}
