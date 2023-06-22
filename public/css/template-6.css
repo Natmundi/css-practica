@@ -301,50 +301,47 @@
     flex-direction: column;
     padding-left: var(--space-l);
     gap: var(--space-l);
-
-    position: relative;
 }
+
+.list_sign {
+    
+    background-color: var(--color-primary);
+    width: 32px;
+    height: 32px;
+}
+
+.list_content:nth-child(2) .list_sign {
+    background-color: #e83e8c;
+}
+
+
+.list_content:last-child .list_sign {
+    background-color: #6f42c1;
+}
+
 
 .list_content {
     display: flex;
     flex-direction: column;
-
+    
+    gap: var(--space-s);
     padding-bottom: var(--space-m);
     border-bottom: 1px solid var(--color-border);
 }
 
-.list_nickname::before {
-    content: "";
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    background-color: blue;
-}
-
-.list_nickname::before {
-   float: left;
-   margin-right: 8px;
-}
-
-.list_nickname::before {
-    background-color: #e83e8c;
-}
 
 .list_nickname {
     font-size: var(--size-s);
     font-weight: var(--weight-title);
     color: var(--color-grey-text);
-    vertical-align: text-top;
+    
 }
 
 .list_description {
     font-size: var(--size-d);
     font-weight: var(--weight-text);
     color: var(--color-grey-text);
-    vertical-align: text-top;
 
-    display: flex;
-    padding-left: 40px;
 }
 
 .expirience_block {
@@ -360,6 +357,7 @@
 
 .expirience_inline {
     display: flex;
+    position: relative;
 }
 
 .expirience_title {
@@ -373,17 +371,18 @@
 
 .expirience_badge {
     
-    position: relative;
-    left: 50px;
-    top: 0;
+    position: absolute;
+    bottom: 100%;
+    left: 100%;
+
     transform: rotate(30deg);
     
-
     background-color: #ff7347;
     border-radius: 70px;
-
+    
     font-size: var(--size-l);
-    padding: 12px;
+    
+    padding: 12px 24px;
     color: var(--color-white);
 }
 
