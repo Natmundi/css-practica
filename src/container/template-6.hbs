@@ -62,7 +62,11 @@
 
     <div class="expirience_block">
         {{#with expirience}}
-            <h3 class="experience_title">{{title}}</h3>
+            <div class="expirience_inline">
+                <h3 class="expirience_title">{{title}}</h3>
+            
+                <span class="expirience_badge">{{badge}}</span>
+            </div>
            <div class="expirience_column">
                 {{#each list}}
                     <div class="expirience_list">

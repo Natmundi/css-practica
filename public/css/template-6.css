@@ -18,6 +18,7 @@
     --color-title: #212529;
     --color-text: #343A40;
     --color-grey-text: #6c757d;
+    --color-block: #F8F9FA;
 
     --border-radius-d: 12px;
     --border-radius-s: 4px;
@@ -143,7 +144,7 @@
     max-width: 380px;
     width: 100%;
 
-    background-color: #F8F9FA;
+    background-color: var(--color-block);
     border-radius: var(--border-radius-s);
 
     padding: 48px 60px;
@@ -157,9 +158,10 @@
     border-top: 1px solid  rgb(102, 102, 102);
     padding-top: var(--space-xl);
     text-align: center;
+    white-space: nowrap;
     color: var(--color-grey-text);
     font-weight: var(--weight-text);
-    font-size: var(--size-s);
+    font-size: 12px;
     line-height: 24px;
 
 }
@@ -306,29 +308,112 @@
 .list_content {
     display: flex;
     flex-direction: column;
-    gap: var(--space-m);
 
     padding-bottom: var(--space-m);
     border-bottom: 1px solid var(--color-border);
+}
+
+.list_nickname::before {
+    content: "";
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-color: blue;
+}
+
+.list_nickname::before {
+   float: left;
+   margin-right: 8px;
+}
+
+.list_nickname::before {
+    background-color: #e83e8c;
 }
 
 .list_nickname {
     font-size: var(--size-s);
     font-weight: var(--weight-title);
     color: var(--color-grey-text);
+    vertical-align: text-top;
 }
 
 .list_description {
     font-size: var(--size-d);
     font-weight: var(--weight-text);
     color: var(--color-grey-text);
+    vertical-align: text-top;
+
+    display: flex;
+    padding-left: 40px;
 }
 
 .expirience_block {
+    width: 100%;
     display: flex;
     flex-direction: column;
    
     gap: var(--space-l);
     padding: 28px var(--space-l);
+
+    background-color: var(--color-block);
 }
 
+.expirience_inline {
+    display: flex;
+}
+
+.expirience_title {
+    max-width: 940px;
+    width: 100%;
+
+    font-size: 42px;
+    font-weight: var(--weight-title);
+    color: var(--color-title);
+}
+
+.expirience_badge {
+    
+    position: relative;
+    left: 50px;
+    top: 0;
+    transform: rotate(30deg);
+    
+
+    background-color: #ff7347;
+    border-radius: 70px;
+
+    font-size: var(--size-l);
+    padding: 12px;
+    color: var(--color-white);
+}
+
+.expirience_column {
+    display: flex;
+    gap: var(--space-l);
+}
+
+.expirience_list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xm);
+
+    background-color: var(--color-title);
+    color: var(--color-white);
+    padding: var(--space-xm);
+
+    border-radius: var(--border-radius-d);
+    text-align: start;
+}
+
+.expirience_name {
+    font-size: var(--size-l);
+    font-weight: var(--weight-title);
+    line-height: 26px;
+}
+
+.expirience_details {
+    font-size: var(--size-d);
+    font-weight: var(--weight-text);
+    color: #b1b1b1;
+    line-height: 22px;
+}
