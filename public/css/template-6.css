@@ -298,24 +298,26 @@
 
 .list_user {
     display: flex;
-    flex-direction: column;
-    padding-left: var(--space-l);
-    gap: var(--space-l);
+    padding-left: var(--space-m);
+    gap: var(--space-s);
 }
 
 .list_sign {
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background-color: var(--color-primary);
     width: 32px;
     height: 32px;
 }
 
-.list_content:nth-child(2) .list_sign {
+.list_user:nth-of-type(2n) .list_sign {
     background-color: #e83e8c;
 }
 
 
-.list_content:last-child .list_sign {
+.list_user:last-of-type .list_sign {
     background-color: #6f42c1;
 }
 

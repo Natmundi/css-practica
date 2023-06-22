@@ -43,24 +43,23 @@
          
     </main>
     
-    <div class="updates_block">
-        {{#with updates}}
+    {{#with updates}}
+        <div class="updates_block">
             <h4 class="list_title">{{title}}</h4>
-            <div class="list_user">
                 {{#each list}}
-                    <div class="list_content">
-                        <div class="list_sign"></div>
-                        <span class="list_nickname">{{nickname}}</span>
-                        <p class="list_description">{{description}}</p>
+                    <div class="list_user">
+                        <div class="list_sign">32*32</div>
+                            <div class="list_content">
+                                <span class="list_nickname">{{nickname}}</span>
+                                <p class="list_description">{{description}}</p>
+                            </div>
                     </div>
                 {{/each}}
-            </div>
             
             <a href="{{show_all.url}}" class="show_link">{{show_all.text}}</a>
-           
-        {{/with}}
-    </div>
-
+        </div>   
+    {{/with}}
+    
     <div class="expirience_block">
         {{#with expirience}}
             <div class="expirience_inline">
