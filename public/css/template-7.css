@@ -50,6 +50,7 @@
    
     gap: 60px;
     color: var(--color-white);
+    padding: 10px;
 
 }
 
@@ -257,5 +258,42 @@
     color: var(--color-text);
     font-size: var(--size-s);
     line-height: 170%;
+}
+
+.articles_block {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--size-page);
+    gap: 32px;
+    align-items: flex-start;
+}
+
+.articles_inline {
+    color: var(--color-white);
+    font-size: 32px;
+    font-weight: var(--weight-title);
+    line-height: var(--line-height-d);
+    text-transform: capitalize;
+}
+
+.articles_column {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+}
+
+.articles_card {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 16px;
+
+}
+
+.articles_image {
+    width: calc(var(--page-width) / 3);
+    height: 150;
+    border-radius: 24px;
+    
 }
 
