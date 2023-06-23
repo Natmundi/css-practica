@@ -1,0 +1,9 @@
+{{#with hero}}
+  <h1 class='hero_title'>{{title}}</h1>
+  <p class='hero_text'>{{description}}</p>
+  <button class='hero_button'>
+    {{#with button}}
+      <a href='{{url}}' class='hero_link'>{{text}}</a>
+    {{/with}}
+  </button>
+{{/with}}
