@@ -1,10 +1,26 @@
-@layer main, secondary;
+@import "/css/var.css";
 
-@layer secondary {
+@font-face {
+    font-family: "Segment";
+    src: url("/font/Segment-Regular.otf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Segment";
+    src: url("/font/Segment-SemiBold.otf");
+    font-weight: 600;
+}
+
+
+@layer normalize, main, component, style;
+
+@layer style {
     .card_button {
         background-color: red;
     }
 }
+
 
 @keyframes fly {
     from {
@@ -38,41 +54,18 @@
     }
 }
 
-:root {
-    --space-m: 12px;
-    --space-xm: 16px;
-    --space-l: 24px;
-    --space-b: 36px;
-
-    --size-s: 14px;
-    --size-d: 16px;
-    --size-l: 20px;
-
-    --color-border: #dee2e6;
-    --color-primary: rgb(48, 48, 219);
-    --color-white: #ffff;
-    --color-title: #212529;
-    --color-text: #343A40;
-
-    --border-radius: 12px;
-
-    --weight-title: 500;
-    --weight-text: 400;
-
-    --page-width: 960px;
-}
 
 /*====================*/
 
 .page {
     background: var(--color-white);
-    padding: 0 15px;
+    padding: 15px 25px;
 
     display: flex;
     justify-content: center;
 }
 .page_content {
-    max-width: var(--page-width);
+    
     width: 100%;
 
     display: flex;
@@ -93,7 +86,7 @@
 
     position: sticky;
 
-    width: var(--page-width);
+    width: 100%;
 
     top: 0;
 
@@ -167,7 +160,7 @@
 .hero {
     display: flex;
     align-items: center;
-    
+    width: 100%;
     gap: var(--space-b);
 
     padding: var(--space-b);
@@ -176,13 +169,13 @@
 }
 
 .hero_image {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+    width: 500px;
+    height: 500px;
     border-radius: var(--border-radius);
 }
 
 .hero_content {
+
     display: flex;
     flex-direction: column;
 
@@ -241,29 +234,34 @@
     color: var(--color-text);
 }
 
-.button {
-    display: inline-block;
-    font-size: var(--size-d);
-    text-decoration: none;
-    padding: var(--space-m) var(--space-xm);
-    border-radius: var(--border-radius);
-
-    transition: opacity 1s, background-color 1s;
-}
-
 @layer main {
-    .card_button {
-        color: var(--color-white);
-        
-        background-color: var(--color-primary);
+    .button {
+        display: inline-block;
+        font-size: var(--size-d);
+        text-decoration: none;
+        padding: var(--space-m) var(--space-xm);
+        border-radius: var(--border-radius);
+    
+        transition: opacity 1s, background-color 1s;
+    }
+    
+    .button:hover {
+        opacity: 0.7;
+        background-color: yellow;
+        color: black;
     }
 }
 
-.button:hover {
-    opacity: 0.7;
-    background-color: yellow;
-    color: black;
-}
+
+    @layer component {
+        .card_button {
+            color: var(--color-white);
+            
+            background-color: var(--color-primary);
+        }
+    }
+
+
 
 .form {
     display: flex;
@@ -470,8 +468,10 @@ body:hover .modal {
 }
 
 .hero_container {
-    container-type: inline-size;
+    container-type: size;
     container-name: hero;
+
+    height: 500px;
 }
 
 @container hero (width < 960px) {
@@ -480,3 +480,25 @@ body:hover .modal {
     }
 }
 
+.ex {
+    display: inline-block;
+    font-size: 1.5em;
+    margin-left: 1ex;
+
+    line-height: 1.5em;
+}
+
+/* .test {
+    position: absolute;
+    background: red;
+    top: 0;
+    left: 0;
+
+    height: 100vmax;
+    width: 100vmax;
+    z-index: 9999;
+} */
+
+.hero_title {
+    font-size: 5cqw;
+}
