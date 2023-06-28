@@ -1,3 +1,5 @@
+@layer normalize;
+
 @font-face {
     font-family: "HelveticaNeueBold";
     src: url("/font/HelveticaNeueBold");
@@ -11,16 +13,60 @@ body {
 
 :root {
     --color-white: #FFFFFF;
+
+    --page-width-b: 1260px;
+    --page-width-m: 1000px;
+    --page-width-s: 700px;
+
+    --spacing-1: 8px;
+    --spacing-2: 12px;
+    --spacing-3: 16px;
+    --spacing-4: 20px;
+    --spacing-5: 24px;
+    --spacing-6: 28px;
 }
 
 .page {
+    display: grid;
+}
+
+.page_section {
     display: flex;
     justify-content: center;
-
-    --page-width: 1100px,
 }
 
 .page_content {
     width: 100%;
-    
+
+    padding: var(--spacing-3);
+
+    display: grid;
+}
+
+@media all and (1260px <= width) {
+    .page_content {
+        max-width: var(--page-width-b);
+    }
+}
+
+@media all and (1000px <= width < 1260px) {
+    .page_content {
+        max-width: var(--page-width-m);
+    }
+}
+
+@media all and (700px <= width < 1000px) {
+    .page_content {
+        max-width: var(--page-width-s);
+    }
+}
+
+.hero_section {
+    display: grid;
+    gap: 35px;
+}
+
+.hero {
+    display: grid;
+    gap: var(--spacing-4);
 }
