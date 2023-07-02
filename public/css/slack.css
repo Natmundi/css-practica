@@ -443,6 +443,16 @@ body {
             left: 443px;
             height: 336px;
         }
+
+        .keep_image {
+            position: unset;
+            order: -1;
+        }
+
+        .keep_card {
+            width: 100%;
+            margin-top: var(--spacing-6);
+        }
     }
     
     @media all and (width < 1000px) {
@@ -466,6 +476,17 @@ body {
         .features_section {
             background: none;
         }
+
+        .keep_image {
+            position: unset;
+            order: -1;
+        }
+
+        .keep_card {
+            width: 100%;
+            margin-top: var(--spacing-6);
+        }
+        
         .need_section {
             background-image: none;
         }
@@ -479,16 +500,7 @@ body {
             margin-top: 6px;
         }
 
-        .keep_image {
-            position: unset;
-            order: -1;
-        }
-
-        .keep_card {
-            width: 100%;
-            margin-top: var(--spacing-6);
-        }
-
+        
         .explore_card_content {
             gap: var(--spacing-3);
         }
