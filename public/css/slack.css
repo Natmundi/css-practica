@@ -121,6 +121,13 @@
         width: 24px;
         background-image: url("/img/exploreicon.png")
       }
+
+      .explore_logo {
+        display: grid;
+        padding-right: var(--spacing-3);
+        padding-bottom: var(--spacing-3);
+        justify-items: stretch;
+      }
    
 }
 
@@ -379,9 +386,10 @@ body {
 
   .explore_card {
     display: grid;
-    grid-template-rows: min-content min-content 1fr min-content;
+    grid-template-rows: min-content min-content 1fr max-content;
     height: 420px;
     background-color: var(--color-white);
+    
     
     box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.10);
   }
@@ -405,6 +413,7 @@ body {
     text-align: start;
     margin-top: var(--spacing-1);
     padding-left: var(--spacing-2);
+    padding-right: 50px;
   }
 
   .explore_name_end {
@@ -412,16 +421,9 @@ body {
     color: #1264a3;
     text-transform: uppercase;
     padding-left: var(--spacing-2);
-    padding-bottom: 0;
+    margin-bottom: -20px;
     text-decoration: none;
   }
-
-  .explore_logo {
-    display: flex;
-    justify-content: end;
-    padding-right: 16px;
-  }
-
 
 }
 
@@ -464,6 +466,32 @@ body {
         .features_section {
             background: none;
         }
+        .need_section {
+            background-image: none;
+        }
+
+        .need_content {
+            align-items: flex-start;
+        }
+
+        .features_grid_3 {
+            grid-template-columns: repeat(3, 210px);
+            margin-top: 6px;
+        }
+
+        .keep_image {
+            position: unset;
+            order: -1;
+        }
+
+        .keep_card {
+            width: 100%;
+            margin-top: var(--spacing-6);
+        }
+
+        .explore_card_content {
+            gap: var(--spacing-3);
+        }
 
     }
 
@@ -477,11 +505,32 @@ body {
         grid-template-columns: repeat(2, 2fr);
     }
 
+    .features_grid_3 {
+        grid-template-columns: repeat(2, 2fr);
+        margin-top: 6px;
+    }
+    .exprore_section {
+        padding-left: var(--spacing-5);
+    }
+
+    .explore_card_content {
+        grid-template-columns: repeat(2, 2fr);
+    }
+
     }
 
     @media all and (width < 400px) {
         .features_grid_4 {
             grid-template-columns: 1fr;
+    }
+
+    .features_grid_3 {
+        grid-template-columns: 1fr;
+        margin-top: 6px;
+    }
+
+    .explore_card_content {
+        grid-template-columns: 1fr;
     }
 }
 }
