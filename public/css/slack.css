@@ -445,8 +445,9 @@ body {
         }
 
         .keep_image {
-            position: unset;
-            order: -1;
+            width: 480px;
+            top: 75px;
+            left: -20px;
         }
 
         .keep_card {
@@ -486,7 +487,7 @@ body {
             width: 100%;
             margin-top: var(--spacing-6);
         }
-        
+
         .need_section {
             background-image: none;
         }
