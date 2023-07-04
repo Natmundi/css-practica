@@ -42,7 +42,7 @@
     <div class='page page--dashboard'>
       <aside class='page__aside aside vertical'>
         <div class='text aside__logo'>Sidebar</div>
-        <nav class='vertical vertical--small'>
+        <nav class="vertical vertical--small">
           <a
             href='#'
             class='nav-button nav-button__active click'
@@ -74,7 +74,7 @@
             <span class='text text--light'>Products</span>
 
           </a>
-        <div class="field__block">
+        <div class="relative">
           
             <div class="field field--select">
               <span class="text text--light">Choose...</span>
@@ -92,7 +92,7 @@
       </aside>
       <header class='header'>
         <div class="layout header__content text--small">
-          <div class="header__search">
+          <div class="header__search relative">
             <input type="text" placeholder="Search" class="text field field--header">
             <span class="icon header__icon-search" style="background-image: url(/svg/header/search.svg)"></span>
             <span class="icon icon--header-settings click" style="background-image: url(/svg/header/settings.svg)"></span>
@@ -108,14 +108,45 @@
         <div class="layout">
           <section class="box analytic__block">
           <div class="analytic analytic--double analytic--purple">
-            <span class="icon analytic__button icon--button click" style="background-image: url(/svg/analytic/earn.svg)"></span>
+            <span class="icon analytic__button click" style="background-image: url(/svg/analytic/earn.svg)"></span>
+
+            <div class="relative vertical vertical--small">
+              <div class="analytic__title text text--light">$500.00</div>
+              <div class="text text--small text--lighter">Total earning</div>
+
+               <span class="icon analytic__arrow click" style="background-image: url(/svg/analytic/purple-arrow.svg)"></span>
+            </div>
           </div>
 
           <div class="analytic analytic--double analytic--blue">
             <span class="icon analytic__button icon--button click" style="background-image: url(/svg/analytic/order.svg)"></span>
+
+            <div class="relative vertical vertical--small">
+              <div class="analytic__title text text--light">$961</div>
+              <div class="text text--small text--lighter">Total Order</div>
+            </div>
           </div>
-          <div class="analytic analytic--blue">Test</div>
-          <div class="analytic analytic--white">Test</div>
+
+          <div class="analytic analytic--blue">
+            
+            <div class="relative horizontal">
+              <span class="icon analytic__button click" style="background-image: url(/svg/analytic/earn.svg)"></span>
+              <div class="analytic--horizontal">
+                <div class="analytic__title analytic__title--small text text--light">$203k</div>
+                <div class="text text--small text--lighter">Total Income</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="analytic analytic--white">
+            <div class="relative horizontal">
+              <span class="icon analytic__button click" style="background-image: url(/svg/analytic/income.svg)"></span>
+                <div class="analytic--horizontal">
+                  <div class="analytic__title analytic__title--small text text--bold">$203k</div>
+                  <div class="text text--gray text--small">Total Income</div>
+                </div>
+            </div>
+          </div>
 
         </section>
         </div>
