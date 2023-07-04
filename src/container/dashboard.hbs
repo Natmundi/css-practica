@@ -41,7 +41,7 @@
   <body>
     <div class='page page--dashboard'>
       <aside class='page__aside aside vertical'>
-        <div class='aside__logo'>Sidebar</div>
+        <div class='text aside__logo'>Sidebar</div>
         <nav class='vertical vertical--small'>
           <a
             href='#'
@@ -74,21 +74,52 @@
             <span class='text text--light'>Products</span>
 
           </a>
+        <div class="field__block">
+          
+            <div class="field field--select">
+              <span class="text text--light">Choose...</span>
+             <span class="icon select--icon-check" style="background-image: url(/svg/select/check.svg)"></span> 
+          </div>
+          <select class="field__select click" name="" id="">
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="parrot">Parrot</option>
+                <option value="hamster">Hamster</option>
+                <option value="bird">Bird</option>
+              </select>
+        </div>
         </nav>
       </aside>
       <header class='header'>
         <div class="layout header__content text--small">
           <div class="header__search">
-            <input type="text" placeholder="Search" class="field field--header">
+            <input type="text" placeholder="Search" class="text field field--header">
             <span class="icon header__icon-search" style="background-image: url(/svg/header/search.svg)"></span>
             <span class="icon icon--header-settings click" style="background-image: url(/svg/header/settings.svg)"></span>
           </div>
           <div class="icon__list">
-            <span class="icon icon--header-sign" style="background-image: url(/svg/header/signchina.svg)"></span>
+              <span class="icon icon--header-size click" style="background-image: url(/svg/header/antena.svg)"></span>
+              <span class="icon icon--header-size click" style="background-image: url(/svg/header/chinasign.svg)"></span>
+              <span class="icon icon--header-size click" style="background-image: url(/svg/header/bell.svg)"></span>
           </div>
         </div>
       </header>
-      <main class='main'>Test3</main>
+      <main class='main'>
+        <div class="layout">
+          <section class="box analytic__block">
+          <div class="analytic analytic--double analytic--purple">
+            <span class="icon analytic__button icon--button click" style="background-image: url(/svg/analytic/earn.svg)"></span>
+          </div>
+
+          <div class="analytic analytic--double analytic--blue">
+            <span class="icon analytic__button icon--button click" style="background-image: url(/svg/analytic/order.svg)"></span>
+          </div>
+          <div class="analytic analytic--blue">Test</div>
+          <div class="analytic analytic--white">Test</div>
+
+        </section>
+        </div>
+      </main>
     </div>
   </body>
 

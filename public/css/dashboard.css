@@ -70,7 +70,7 @@ body {
    }
 
    .main  {
-    padding: var(--spacing-9) 0;
+    padding: var(--spacing-9);
     display: grid;
     gap: var(--spacing-9)
    }
@@ -114,11 +114,12 @@ body {
 
    .click:hover {
     opacity: var(--opacity-1);
-
+    cursor: pointer;
    }
 
     .click:active {
-        opacity: var();
+        opacity: var(--opacity-2);
+        cursor: pointer;
     }
 
     .header {
@@ -139,6 +140,26 @@ body {
         padding: 0 var(--spacing-2);
        }
 
+       .icon__list {
+        display: flex;
+        gap: var(--spacing-5);
+       }
+
+       .box {
+        background-color: var(--color-white);
+        padding: var(--spacing-5);
+        border-radius: 16px;
+       }
+      
+       .analytic {
+        border-radius: 8px;
+        padding: var(--spacing-5);
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: stretch;
+       }
 }
 
 
@@ -181,6 +202,30 @@ body {
     left: var(--spacing-2)
    }
 
+   .field__block {
+    position: relative;
+   }
+
+   .field__select {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+   }
+
+   .analytic__block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: var(--spacing-5);
+   }
+
+   .analytic__button {
+    height: 44px;
+    width: 44px;
+   }
 
 }
 
@@ -245,18 +290,47 @@ body {
         top: calc(50% - (28px / 2));
        }
 
-       .icon--button {
-        border-radius: var(--radius-1);
-       }
-
-       .icon--color-yellow {
-        background-color: #FFF8E3;
-       }
-
-       .icon--header-sign {
+       .icon--header-size {
         width: 32px;
         height: 32px;
        }
+
+       .field--select {
+        display: flex;
+        align-items: center;
+       
+       }
+
+       .select--icon-check {
+        height: 12px;
+        width: 12px;
+        position: absolute;
+        top: calc(50% - (12px / 2));
+        right: var(--spacing-2);
+       }
+
+       .analytic--double {
+        grid-row: 1 / 3;
+       }
+
+       .analytic--blue {
+        background-color: var(--color-primary);
+        
+       }
+
+       .analytic--purple {
+        background-color: var(--color-purple-light);
+        
+       }
+
+       .analytic--white {
+        background-color: var(--color-white);
+        border: 1px solid var(--color-light);
+        
+       }
+
+       
+
 }
 
 @layer adaptive {
