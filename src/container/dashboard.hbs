@@ -149,10 +149,11 @@
           </div>
         </section>
 
-        <main class="main_2">
-          <section class="box purchase__block vertical">
+        <main class="main__2">
+          <section class="purchase__block box vertical">
             <h3 class="purchase__title text text--heading">Purchase list</h3>
             <hr class="divider">
+
             <div class="purchase__list vertical">
 
               <div class="purchase__content">
@@ -193,14 +194,81 @@
                   <span class="text">Customer</span>
                   <span class="text">dima@com.ua</span>
                 </div>
-              
             </div>
           </section>
-          
-          <section class="box payment__block vertical">
-            <h3 class="purchase__title text text--heading">Payment</h3>
+
+          <section class="box">
+            <div class="payment__block vertical">
+              <h3 class="purchase__title text text--heading">Payment</h3>
+              <hr class="divider">
+
+              <div class="checkbox__block">
+                <div class="checkbox__content">
+                  <input type="radio" class="checkbox__input">
+                  <label for="" class="checkbox__label text">Credit card</label>
+                </div>
+                <div class="checkbox__content">
+                  <input type="radio" class="checkbox__input">
+                  <label for="" class="checkbox__label text">Debit card</label>
+                </div>
+                <div class="checkbox__content">
+                  <input type="radio" class="checkbox__input">
+                  <label for="" class="checkbox__label text">PayPal</label>
+                </div>
+              </div>
+
+              <div class="input__block vertical">
+                <div class="input__content">
+                  <span class="input__title">Name ofo card</span>
+                  <input type="text" class="input">
+                </div>
+                <div class="input__content">
+                  <span class="input__title">Credit card number</span>
+                  <input type="text" class="input">
+                </div>
+                <div class="input__content">
+                  <span class="input__title">Expiration</span>
+                  <input type="text" class="input">
+                </div>
+                <div class="input__content">
+                  <span class="input__title">CVV</span>
+                  <input type="text" class="input">
+                </div>
+            </div>
+
             <hr class="divider">
-            Test
+              <div class="credit__block">
+                <div class="credit__content">
+                  <span class="text">Country</span>
+                    <div class="relative">
+            
+                        <div class="field field--select">
+                          <span class="text text--black">Choose...</span>
+                          <span class="icon select--icon-check" style="background-image: url(/svg/select/check.svg)"></span> 
+                        </div>
+
+                        <select class="field__select click" name="" id=""></select>
+                    </div>
+                </div>
+                <div class="credit__content">
+                  <span class="text">State</span>
+                    <div class="relative">
+            
+                        <div class="field field--select">
+                          <span class="text text--black">Choose...</span>
+                          <span class="icon select--icon-check" style="background-image: url(/svg/select/check.svg)"></span> 
+                        </div>
+
+                        <select class="field__select click" name="" id=""></select>
+                    </div>
+                </div>
+              </div>
+
+              <hr class="divider">
+            <div class="button__block">
+                  <button class="button click click:hover">Continue to checkout</button>
+            </div>
+            </div>
           </section>
 
         </main>
